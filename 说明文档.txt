@@ -1,0 +1,42 @@
+================================================================================
+                                    LSTM程序说明
+===============================================================================
+
+本人使用matlab语言，完成LSTM神经网络程序的编写。
+
+本程序包含以下文件：
+
+LSTM_main.m
+这是主函数文件，程序运行的入口，里面包含数据加载、网络参数初始化、网络训练学习、绘制Error-Cost曲线图、数据检验和预测。
+
+LSTM_data_process.m
+这是数据加载文件，包含数据文件txt的导入。
+
+LSTM_updata_weight.m
+这是权重更新函数文件，里面包含权重更新函数、更新weight_preh_h权重、更新weight_outputgate_x、更新weight_inputgate_x、更新weight_input_x、更新weight_forgetgate_x、更新weight_inputgate_c、更新weight_forgetgate_c、更新weight_outputgate_c、更新weight_input_h、更新weight_input_x。
+
+shuru_1.txt
+这是输入向量的数据，包括6组1000维的数据。
+
+shuchu_1.txt
+这是输出向量的数据，包括7组100维的数据。
+
+test_1.txt
+这是测试数据，包括1组1000维的数据。
+
+predict_1.txt
+这是预测数据，包括1组1000维的数据。
+
+/////////////////////////////////////////////////////////////////////////////
+
+快速使用说明：
+
+在LSTM_data_process.m文件中的train_data_initial= load('')加载需要的输入数据文件，在test_data_initial= load('')加载需要的输出数据文件。
+
+在LSTM_main.m文件中的test_final= load('')加载测试数据文件和预测数据文件。
+
+在LSTM_main.m和LSTM_updata_weight.m中的input_num和output_num设置输入向量和输出向量的结点数。
+
+在LSTM_main.m和LSTM_updata_weight.m中根据需要设置隐藏结点数cell_num，误差阈值cost_gate，迭代步数iter，权重调整比例yita，前馈数目m。
+
+/////////////////////////////////////////////////////////////////////////////
